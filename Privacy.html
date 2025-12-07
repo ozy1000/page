@@ -2,118 +2,149 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
   <style type="text/css">
+    :root {
+      --primary-color: #1e6f5c;   /* 墨绿色主色 */
+      --primary-dark: #144e40;    /* 深墨绿 */
+      --primary-light: #a6ead8;   /* 浅绿点缀 */
+      --text-color: #2d3a35;
+      --bg-color: #ecf5f3;         /* 浅绿背景 */
+      --card-bg: #ffffff;
+    }
+
     body, html {
-      font-family: 'Open Sans', sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
       text-rendering: optimizeLegibility !important;
       -webkit-font-smoothing: antialiased !important;
-      color: #d9e6e4; /* 淡绿文字 */
-      background-color: #0f2f2f; /* 深墨绿背景 */
-      width: 100% !important;
-      height: 100% !important;
+      color: var(--text-color);
+      background-color: var(--bg-color);
+      line-height: 1.6;
       margin: 0;
+      padding: 0;
     }
 
-    /* Top Intro Section */
-    #intro {
-      display: table;
-      width: 100%;
-      padding: 40px 40px;
-      text-align: left;
-      color: #fff;
-      background-color: #0f2f2f;
-      background-size: cover;
-    }
-    #intro .intro-body {
-      display: table-cell;
-      vertical-align: middle;
-    }
-    #intro .intro-body H1 {
-      font-size: 56px;
-      font-weight: 700;
-      color: #6fd7c7; /* 青绿色标题点缀 */
-    }
-
-    /* Subtitle Section */
-    #agreementIntro {
-      display: table;
-      width: 100%;
-      padding: 10px 0;
+    .header {
+      background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+      color: white;
+      padding: 4rem 2rem;
       text-align: center;
-      color: #e5f7f4;
-      background-color: #123b3b; /* 更深的墨绿 */
-    }
-    #agreementIntro .intro-body {
-      display: table-cell;
-      vertical-align: middle;
-    }
-    #agreementIntro .intro-body H1 {
-      font-size: 24px;
-      font-weight: 300;
-      color: rgba(111, 215, 199, 0.9); 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
-    .btn-custom, input[type="button"], input[type="submit"], input[type="reset"], button {
-      font-family:Lato, Arial, sans-serif;
-      color:#FFF !important;
-      font-size:15px;
-      line-height: 50px;
-      text-align:left;
-      font-weight:700;
-      text-transform:uppercase;
-      white-space:nowrap;
-      background-color:#1d4e4e;
-      padding:14px 30px;
-      outline:none !important;
-      border-radius:25px;
-      box-shadow: 0px 0px 10px rgba(10, 70, 70, .4);
-      transition: color .2s ease, background .2s ease, border .2s ease;
+    .header h1 {
+      font-size: 2.5rem;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.5px;
     }
 
-    .div-padding{
-      padding-left:40px;
-      padding-right:40px;
-      padding-top:20px;
-      padding-bottom:50px;
-      background-color: #0f2f2f; 
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      margin-top: -3rem;
+      position: relative;
     }
 
-    a { color: #6fd7c7; }
+    .section {
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      background: rgba(30, 111, 92, 0.05);
+      border: 1px solid rgba(30, 111, 92, 0.15);
+    }
+
+    h2 {
+      color: var(--primary-color);
+      font-size: 1.5rem;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    p {
+      margin: 1rem 0;
+      color: #556963;
+      font-size: 1rem;
+    }
+
+    .contact {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, rgba(30, 111, 92, 0.1), rgba(20, 78, 64, 0.1));
+      border-radius: 12px;
+    }
+
+    .contact a {
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .header {
+        padding: 3rem 1rem;
+      }
+
+      .content {
+        margin: -2rem 1rem 2rem;
+        padding: 1.5rem;
+      }
+
+      .header h1 {
+        font-size: 2rem;
+      }
+    }
   </style>
 </head>
-
 <body>
-<div id="intro">
-  <div class="intro-body">
-    <h1><strong>Privacy Policy</strong></h1>
+  <div class="header">
+    <h1>Privacy Policy</h1>
   </div>
-</div>
 
-<div class="div-padding">
-  <p>This application respects and protects the privacy of all users who use the service. In order to provide you with more accurate and personalized services, this application will use and disclose your personal information in accordance with the provisions of this Privacy Policy. However, this application will treat this information with a high degree of diligence and prudence. Except as otherwise provided in this Privacy Policy, this application will not disclose or provide this information to third parties without your prior permission. This app will update this privacy policy from time to time. When you use this application service, you are deemed to have agreed to the entire content of this Privacy Policy. This privacy policy is an integral part of this application service usage agreement. </p>
+  <div class="content">
+    <div class="section">
+      <h2><i class="fas fa-shield-alt"></i> Introduction</h2>
+      <p>This app respects and protects the personal privacy of all users...</p>
+    </div>
 
-  <p>1. Scope of application</p>
-  <p>(a) When you use this application service, you authorize relevant permissions according to the requirements of this application; if the relevant permissions are not authorized, some functions will not be able to be used normally.</p>
+    <div class="section">
+      <h2><i class="fas fa-list"></i> Scope</h2>
+      <p>When you use this app service, you authorize relevant permissions...</p>
+    </div>
 
-  <p>2. Use of information</p>
-  <p>(a) After obtaining your access permissions, this application will use these permissions to provide services.</p>
-  <p>(b) This app will not use unauthorized permissions without permission.</p>
+    <div class="section">
+      <h2><i class="fas fa-user-shield"></i> Use of Information</h2>
+      <p>After obtaining your access permission, this app will use...</p>
+    </div>
 
-  <p>3. Information disclosure</p>
-  <p>(a) This application will not disclose your information to untrusted third parties.</p>
-  <p>(b) In accordance with the relevant provisions of the law, or the requirements of administrative or judicial institutions, disclose to third parties or administrative or judicial institutions;</p>
-  <p>(c) If you violate relevant Chinese laws, regulations or this application service agreement or related rules, you need to disclose it to a third party;</p>
+    <div class="section">
+      <h2><i class="fas fa-lock"></i> Information Security</h2>
+      <p>The data of this app is stored in the app's sandbox...</p>
+    </div>
 
-  <p>4. Information storage and exchange</p>
-  <p>(a) The data about you generated by this application will be stored in the sandbox of this application, stored locally, and will not be actively uploaded to any server, please use it with confidence.</p>
+    <div class="section">
+      <h2><i class="fas fa-share-alt"></i> Information Disclosure</h2>
+      <p>This app will not disclose your information to untrustworthy third parties.</p>
+    </div>
 
-  <p>5. Information security<br>(a) The data of this application is stored in the sandbox of this application, please keep your device properly.</p>
-
-  <br/>
-  <b>Contact email: 15307195181@163.com</b>
-  <br/>
-</div>
-
+    <div class="contact">
+      <h2><i class="fas fa-envelope"></i> Contact Us</h2>
+      <p>If you have any questions...</p>
+      <a href="mailto:15307195181@163.com">15307195181@163.com</a>
+    </div>
+  </div>
 </body>
 </html>
