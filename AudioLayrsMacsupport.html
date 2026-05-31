@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audio Layrs — Support</title>
+  <style>
+    :root{
+      --primary:#8c5ed9;
+      --primary-dark:#6b3fb8;
+      --bg:#f5f1fa;
+      --card:#ffffff;
+      --text:#2a2433;
+      --text-2:#5a5167;
+      --border:#eee4f7;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      min-height:100vh;
+      padding:48px 24px;
+    }
+    .card{
+      max-width:820px;
+      width:100%;
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(140,94,217,0.10);
+      padding:40px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:24px;
+    }
+    .brand-mark{
+      width:36px;height:36px;
+      border-radius:8px;
+      background:linear-gradient(135deg, var(--primary), var(--primary-dark));
+      display:flex;align-items:center;justify-content:center;
+      color:white;font-weight:700;font-size:18px;
+    }
+    .brand-name{font-weight:600;font-size:18px;letter-spacing:-0.01em}
+
+    h1{
+      margin:0 0 8px;
+      font-size:30px;
+      letter-spacing:-0.02em;
+      color:var(--text);
+    }
+    .lead{
+      color:var(--text-2);
+      font-size:16px;
+      line-height:1.65;
+      margin:0 0 32px;
+    }
+
+    h2{
+      color:var(--primary-dark);
+      font-size:18px;
+      margin:28px 0 12px;
+      letter-spacing:-0.01em;
+    }
+    p{margin:0 0 14px;line-height:1.65;color:var(--text-2);font-size:15px}
+
+    ul{padding-left:20px;color:var(--text-2);font-size:15px;line-height:1.7}
+    ul li{margin:4px 0}
+
+    .faq{
+      background:rgba(140,94,217,0.04);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:18px 22px;
+      margin-bottom:12px;
+    }
+    .faq .q{font-weight:600;color:var(--text);margin:0 0 6px;font-size:15px}
+    .faq .a{margin:0;color:var(--text-2);font-size:14.5px;line-height:1.6}
+
+    .contact{
+      margin-top:32px;
+      padding:24px;
+      background:linear-gradient(135deg, rgba(140,94,217,0.08), rgba(107,63,184,0.08));
+      border-radius:12px;
+    }
+    .contact strong{color:var(--primary-dark);font-size:16px}
+    a.email{
+      color:var(--primary);
+      text-decoration:none;
+      font-weight:600;
+    }
+    a.email:hover{text-decoration:underline}
+    small{display:block;margin-top:10px;color:#8c829c;font-size:13px}
+
+    @media (max-width:600px){
+      .card{padding:28px 22px}
+      h1{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="brand">
+      <div class="brand-mark">L</div>
+      <div class="brand-name">Audio Layrs</div>
+    </div>
+
+    <h1>Support</h1>
+    <p class="lead">
+      Audio Layrs splits any song into drums, bass, vocals, and accompaniment using on-device AI — fully private, no uploads required. Below are answers to common questions. If you don't find what you need, get in touch.
+    </p>
+
+    <h2>System Requirements</h2>
+    <ul>
+      <li>macOS 14 (Sonoma) or later</li>
+      <li>Apple Silicon Mac (M1 / M2 / M3 / M4 or later) — Intel Macs are not supported</li>
+      <li>At least 2 GB of free disk space for the AI models</li>
+    </ul>
+
+    <h2>Supported File Formats</h2>
+    <ul>
+      <li><strong>Audio:</strong> mp3, wav, m4a, aac, aiff, flac</li>
+      <li><strong>Video:</strong> mp4, mov, m4v (audio track is extracted automatically)</li>
+      <li><strong>Export:</strong> M4A (AAC)</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <p class="q">Does Audio Layrs upload my songs to a server?</p>
+      <p class="a">No. All processing happens locally on your Mac using Core ML and Apple Silicon. Your audio files never leave your device. The app also works fully offline.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">Why is extraction grayed out on other tracks while one is running?</p>
+      <p class="a">Audio Layrs extracts one stem at a time to keep memory usage stable. Once the current extraction finishes, the other Extract buttons become clickable again.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">How long does extraction take?</p>
+      <p class="a">On Apple Silicon, expect roughly 5–15 seconds for a 3-minute song. Faster Macs (M2, M3, M4) run noticeably quicker than M1.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">Where are my extracted tracks stored?</p>
+      <p class="a">Inside the app's sandboxed Application Support folder. Use the row's "···" menu → "Show original file in Finder" to locate the source. You can export any stem or your custom mix to a chosen location via the export button.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">Can I export multiple stems as a single mix?</p>
+      <p class="a">Yes. Set the volume / mute / solo on each track the way you want, then use Export Mix (M4A). Audio Layrs renders your custom mix to an M4A file with your exact settings applied.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">Does Audio Layrs collect any data about me?</p>
+      <p class="a">No analytics, no tracking, no account required. See our Privacy Policy for details.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">Will you add support for Intel Macs?</p>
+      <p class="a">No. The AI models require Apple Silicon Neural Engine / GPU to run at usable speed. Audio Layrs is built exclusively for M-series Macs.</p>
+    </div>
+
+    <section class="contact" aria-label="Contact information">
+      <strong>Contact Us</strong>
+      <p style="margin:10px 0 0">For technical help, bug reports, or feature requests:</p>
+      <p style="margin:8px 0 0"><a class="email" href="mailto:15307195181@163.com">15307195181@163.com</a></p>
+      <small>Including your macOS version, Mac model, app version, and a description of what you were doing helps us reproduce the issue faster. Screenshots are welcome.</small>
+    </section>
+  </main>
+</body>
+</html>
+
