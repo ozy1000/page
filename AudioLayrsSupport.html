@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audio Layrs — Support</title>
+  <style>
+    :root{
+      --primary:#8c5ed9;
+      --primary-dark:#6b3fb8;
+      --bg:#f5f1fa;
+      --card:#ffffff;
+      --text:#2a2433;
+      --text-2:#5a5167;
+      --border:#eee4f7;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:var(--text);
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      min-height:100vh;
+      padding:48px 24px;
+    }
+    .card{
+      max-width:820px;
+      width:100%;
+      background:var(--card);
+      border-radius:16px;
+      box-shadow:0 10px 30px rgba(140,94,217,0.10);
+      padding:40px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-bottom:24px;
+    }
+    .brand-mark{
+      width:36px;height:36px;
+      border-radius:8px;
+      background:linear-gradient(135deg, var(--primary), var(--primary-dark));
+      display:flex;align-items:center;justify-content:center;
+      color:white;font-weight:700;font-size:18px;
+    }
+    .brand-name{font-weight:600;font-size:18px;letter-spacing:-0.01em}
+
+    h1{
+      margin:0 0 8px;
+      font-size:30px;
+      letter-spacing:-0.02em;
+      color:var(--text);
+    }
+    .lead{
+      color:var(--text-2);
+      font-size:16px;
+      line-height:1.65;
+      margin:0 0 32px;
+    }
+
+    h2{
+      color:var(--primary-dark);
+      font-size:18px;
+      margin:28px 0 12px;
+      letter-spacing:-0.01em;
+    }
+    p{margin:0 0 14px;line-height:1.65;color:var(--text-2);font-size:15px}
+
+    ul{padding-left:20px;color:var(--text-2);font-size:15px;line-height:1.7}
+    ul li{margin:4px 0}
+
+    .faq{
+      background:rgba(140,94,217,0.04);
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:18px 22px;
+      margin-bottom:12px;
+    }
+    .faq .q{font-weight:600;color:var(--text);margin:0 0 6px;font-size:15px}
+    .faq .a{margin:0;color:var(--text-2);font-size:14.5px;line-height:1.6}
+
+    .contact{
+      margin-top:32px;
+      padding:24px;
+      background:linear-gradient(135deg, rgba(140,94,217,0.08), rgba(107,63,184,0.08));
+      border-radius:12px;
+    }
+    .contact strong{color:var(--primary-dark);font-size:16px}
+    a.email{
+      color:var(--primary);
+      text-decoration:none;
+      font-weight:600;
+    }
+    a.email:hover{text-decoration:underline}
+    small{display:block;margin-top:10px;color:#8c829c;font-size:13px}
+
+    @media (max-width:600px){
+      .card{padding:28px 22px}
+      h1{font-size:24px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" role="main">
+    <div class="brand">
+      <div class="brand-mark">L</div>
+      <div class="brand-name">Audio Layrs</div>
+    </div>
+
+    <h1>Support</h1>
+    <p class="lead">
+      Audio Layrs splits any song into vocals, drums, bass, and instruments using on-device AI — fully private, no uploads required. Below are answers to common questions. If you don't find what you need, get in touch.
+    </p>
+
+    <h2>System Requirements</h2>
+    <ul>
+      <li>iOS 16.0 or later</li>
+      <li>iPhone with A14 Bionic or later (iPhone 12 and newer recommended for best performance)</li>
+      <li>At least 3.5 GB of available RAM for on-device AI processing</li>
+      <li>About 500 MB of free storage for the AI models and your imported tracks</li>
+    </ul>
+
+    <h2>Supported File Formats</h2>
+    <ul>
+      <li><strong>Import:</strong> mp3, m4a, wav, aac, aiff, flac (from Files app, Music library, or URL)</li>
+      <li><strong>Export:</strong> MP3 at 128 / 256 / 320 kbps</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq">
+      <p class="q">Does Audio Layrs upload my songs to a server?</p>
+      <p class="a">No. All processing happens locally on your iPhone using Core ML and the Neural Engine. Your audio files never leave your device. The core features work fully offline.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">Why can't I import songs from Apple Music?</p>
+      <p class="a">Apple Music subscription tracks are DRM-protected and cannot be exported by any app, including Audio Layrs. Only non-protected music in your library (such as files you've synced from your own collection) can be imported. The picker filters out protected tracks automatically.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">Why is separation queued on other tracks while one is running?</p>
+      <p class="a">Audio Layrs separates one song at a time to keep memory usage stable on iOS. Once the current separation finishes, the next queued track starts automatically.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">How long does separation take?</p>
+      <p class="a">Roughly 30–90 seconds for a 3-minute song, depending on your device. Newer iPhones with more powerful Neural Engines run noticeably faster.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">What are M and S on each track?</p>
+      <p class="a">M = Mute (silence that track). S = Solo (only the soloed tracks play, others are silenced). Solo supports multiple tracks at once — for example, Solo both Vocals and Drums to hear just those two.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">How do I export my custom mix?</p>
+      <p class="a">Adjust the volume, M, and S on each track until it sounds right. Tap the share button on a track row (or the export button in the full-screen player) to render your current mix to MP3 with your exact settings applied. The bitrate is set in Settings → Export Quality.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">Does Audio Layrs collect any data about me?</p>
+      <p class="a">No analytics, no tracking, no account required. See our Privacy Policy for details.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">How do I clear cache or free up storage?</p>
+      <p class="a">Go to Settings inside the app and tap "Clear cache". This removes temporary files and previously exported mixes, but keeps your imported songs and separated stems intact.</p>
+    </div>
+
+    <div class="faq">
+      <p class="q">Does Audio Layrs work on iPad?</p>
+      <p class="a">Yes. Audio Layrs runs on iPad with iPadOS 16 or later. Performance scales with the device — iPad Pro and iPad Air with M-series chips are especially fast.</p>
+    </div>
+
+    <section class="contact" aria-label="Contact information">
+      <strong>Contact Us</strong>
+      <p style="margin:10px 0 0">For technical help, bug reports, or feature requests:</p>
+      <p style="margin:8px 0 0"><a class="email" href="mailto:15307195181@163.com">15307195181@163.com</a></p>
+      <small>Including your iOS version, device model, app version, and a description of what you were doing helps us reproduce the issue faster. Screenshots are welcome.</small>
+    </section>
+  </main>
+</body>
+</html>
+
